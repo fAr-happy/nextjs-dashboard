@@ -38,7 +38,6 @@ async function seedUsers(client) {
       users: insertedUsers,
     };
   } catch (error) {
-    console.error('Error seeding users:', error);
     throw error;
   }
 }
@@ -74,7 +73,6 @@ async function seedInvoices(client) {
       invoices: insertedInvoices,
     };
   } catch (error) {
-    console.error('Error seeding invoices:', error);
     throw error;
   }
 }
@@ -109,7 +107,6 @@ async function seedCustomers(client) {
       customers: insertedCustomers,
     };
   } catch (error) {
-    console.error('Error seeding customers:', error);
     throw error;
   }
 }
@@ -155,9 +152,4 @@ async function main() {
   await client.end();
 }
 
-main().catch((err) => {
-  console.error(
-    'An error occurred while attempting to seed the database:',
-    err,
-  );
-});
+main().catch((err) => {});
