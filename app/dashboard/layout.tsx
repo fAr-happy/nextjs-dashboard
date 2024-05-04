@@ -10,6 +10,3 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
-
-console.log('linter test');
-console.log('linter test');
